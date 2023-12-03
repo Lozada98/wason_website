@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@1,700&family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Rampart+One&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #001A49;
+}
+
+body {
+    background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/fondo_pared.jpg');
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(36, 33, 33, 0.7)), url('../img/wason_index_mobil.jpg');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+.logo {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px rgb(66, 190, 72);
+}
+
+
+/* Nav */
+
+.nav {
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__title {
+    font-weight: 300;
+}
+
+.nav__link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav__items {
+    list-style: none;
+}
+
+.nav__links {
+    font-size: 35px;
+    font-family: 'Allura', cursive;
+    text-shadow: 2px 2px 2px rgb(15, 138, 76);
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.nav__links:hover {
+    color: rgb(82, 209, 50);
+    text-decoration: none;
+}
+
+.nav__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img {
+    display: block;
+    width: 30px;
+}
+
+.nav__close {
+    display: var(--show, none);
+}
+
+
+/* Hero container */
+
+.hero__container {
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 2em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.logo h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    color: whitesmoke;
+    background-size: cover;
+    text-shadow: rgb(0, 0, 0) -2px 0, rgb(0, 0, 0) 2px 0;
+}
+
+#final {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 25vh;
+    background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.7), rgba(43, 42, 42, 0.7)), url("../img/wason-records.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+
+/* From uiverse.io by @barisdogansutcu */
+
+button {
+    border: none;
+    position: relative;
+    width: 200px;
+    height: 73px;
+    padding: 0;
+    z-index: 2;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+    -webkit-mask-size: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    transform: translateY(8px)
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0px 0 0 0 rgb(255, 255, 255);
+    transition: all 2s ease;
+}
+
+button:hover:after {
+    box-shadow: 0px -13px 56px 12px #000000;
+}
+
+button span {
+    position: absolute;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 100;
+    left: 50%;
+    top: 39%;
+    letter-spacing: 3px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: black;
+    transition: all 2s ease;
+}
+
+button:hover span {
+    color: rgb(0, 0, 0);
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease;
+}
+
+button:hover:before {
+    width: 100%;
+}
+
+button a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+button a:hover {
+    color: white;
+}
+
+.copy {
+    color: antiquewhite;
+    font-family: 'Allura', cursive;
+    margin: 0;
+    padding: 30px;
+    font-size: 35px;
+    background-position: center center;
+}
+
+@media (max-width:800px) {
+    .hero {
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+        max-height: 800px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 100px 1fr;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient( 0deg, rgba(121, 117, 117, rgba(161, 150, 150, 0.7), 0.7)), url('../img/wason_index_mobil.jpg');
+        background-size: cover;
+        background-position: center center;
+        z-index: -1;
+    }
+    .nav__menu {
+        display: block;
+    }
+    .nav__link--menu {
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+    .nav__link--show {
+        --show: block;
+        opacity: 1;
+        pointer-events: unset;
+    }
+    .nav__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .hero__title {
+        font-size: 2.5rem;
+    }
+    #final {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        height: 25vh;
+        background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.7), rgba(43, 42, 42, 0.7)), url("../img/wason-records.jpg");
+        background-repeat: no-repeat;
+        color: antiquewhite;
+        z-index: -1;
+    }
+    .copy {
+        color: antiquewhite;
+        font-family: 'Allura', cursive;
+        margin: 0;
+        padding: 30px;
+        font-size: 35px;
+        background-position: center center;
+    }
+}
+
+@media (max-width:600px) {
+    .hero {
+        background-image: linear-gradient( 0deg, rgba(121, 117, 117, rgba(161, 150, 150, 0.7), 0.7)), url('../img/wason_index_mobil.jpg');
+    }
+    .hero__title {
+        font-size: 2rem;
+    }
+    .hero__paragraph {
+        font-size: 1rem;
+    }
+    #final {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 25vh;
+        width: 100%;
+        background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.7), rgba(43, 42, 42, 0.7)), url("../img/wason-records.jpg");
+        background-repeat: no-repeat;
+        color: antiquewhite;
+        z-index: -1;
+    }
+    .copy {
+        color: antiquewhite;
+        font-size: 35px;
+        font-family: 'Allura', cursive;
+        margin: 0;
+        background-position: center center;
+    }
+}
